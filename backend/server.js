@@ -38,13 +38,13 @@ app.post("/api/create-order", async (req, res) => {
   const { plan } = req.body;
 
   const prices = {
-    Pro: 99900,
-    Enterprise: 499900,
+    Pro: 100,
+    Enterprise: 100,
   };
 
   try {
     const order = await razorpay.orders.create({
-      amount: prices[plan] || 99900,
+      amount: prices[plan] || 100,
       currency: "INR",
       receipt: `order_${Date.now()}`,
     });
