@@ -192,7 +192,7 @@ export default function LandingPage() {
                         }
 
                         try {
-                          const res = await fetch("http://localhost:5000/api/create-order", {
+                        const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/create-order`, {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
 
@@ -214,7 +214,7 @@ export default function LandingPage() {
                           }
 
                           const options = {
-                            key: "rzp_live_SdSa3jzHNb7uvp", 
+                            key: process.env.NEXT_PUBLIC_RAZORPAY_KEY, 
                             amount: order.amount,
                             currency: "INR",
                             order_id: order.id,

@@ -48,7 +48,7 @@ export const sendMessage = (data) =>
   API.post("/api/chat", data, {
     headers: { "Content-Type": "application/json" },
   });
-  
+
 // ─── Payment APIs ─────────────────────────────────────
 export const createOrder = (plan) => API.post("/api/create-order", { plan });
 
