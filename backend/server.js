@@ -55,7 +55,9 @@ app.post("/api/create-order", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
 // Health Check
 app.get("/", (req, res) => {
   res.json({ status: "✅ Backend running" });
