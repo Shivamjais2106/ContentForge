@@ -18,6 +18,11 @@
     --foreground: #171717;
   }
 }
+html, body,
+#__next{
+  height: 100%;
+  width: 100%;
+}
 body {
   margin: 0;   /* ✅ THIS FIXES THE GAP */
   padding: 0;
